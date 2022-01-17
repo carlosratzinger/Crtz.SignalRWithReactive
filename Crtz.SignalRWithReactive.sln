@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crtz.Common", "Crtz.Common\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crtz.SignalRSelfHost", "Crtz.SignalRSelfHost\Crtz.SignalRSelfHost.csproj", "{5D429B0F-E8DC-4BD2-B6C3-AA3BF1B3004C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{82795A56-444D-4EE9-9080-BBA53A7C5653}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F9C991A4-B83D-48CE-AB8A-A4CA663F3AAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crtz.Client.WinForms", "Crtz.Client.WinForms\Crtz.Client.WinForms.csproj", "{E7E38309-16C5-472E-8A03-2E75B6FA68A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,19 @@ Global
 		{5D429B0F-E8DC-4BD2-B6C3-AA3BF1B3004C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D429B0F-E8DC-4BD2-B6C3-AA3BF1B3004C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D429B0F-E8DC-4BD2-B6C3-AA3BF1B3004C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7E38309-16C5-472E-8A03-2E75B6FA68A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7E38309-16C5-472E-8A03-2E75B6FA68A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7E38309-16C5-472E-8A03-2E75B6FA68A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7E38309-16C5-472E-8A03-2E75B6FA68A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3378D99E-D1AF-4EFD-8DE6-A5965E7E54E4} = {82795A56-444D-4EE9-9080-BBA53A7C5653}
+		{DC0F9851-82ED-43A8-B907-67CE85954446} = {F9C991A4-B83D-48CE-AB8A-A4CA663F3AAC}
+		{5D429B0F-E8DC-4BD2-B6C3-AA3BF1B3004C} = {F9C991A4-B83D-48CE-AB8A-A4CA663F3AAC}
+		{E7E38309-16C5-472E-8A03-2E75B6FA68A1} = {82795A56-444D-4EE9-9080-BBA53A7C5653}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26CD399E-7953-43EA-BC4F-8BEAC09927D6}

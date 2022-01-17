@@ -7,23 +7,24 @@ using System.Threading.Tasks;
 
 namespace Crtz.Common
 {
-    public class Class1<TResult>
+    public static class Safe
     {
-
-        public static TResult SafeInvoke<T>(this T isi, Func<T> call) where T : ISynchronizeInvoke
+        public static TResult SafeInvoke<T, TResult>(this T isi, Func<T, TResult> call) where T : ISynchronizeInvoke
         {
             if (isi.InvokeRequired)
             {
                 IAsyncResult result = isi.BeginInvoke(call, new object[] { isi });
-                object endResult = isi.EndInvoke(result); return (TResult)endResult;
+                object endResult = isi.EndInvoke(result); 
+                return (TResult)endResult;
             }
             else
-                return call(isi);
+                return call.Invoke(isi);
         }
 
         public static void SafeInvoke<T>(this T isi, Action<T> call) where T : ISynchronizeInvoke
         {
-            if (isi.InvokeRequired) isi.BeginInvoke(call, new object[] { isi });
+            if (isi.InvokeRequired) 
+                isi.BeginInvoke(call, new object[] { isi });
             else
                 call(isi);
         }

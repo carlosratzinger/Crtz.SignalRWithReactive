@@ -55,7 +55,6 @@ namespace Crtz.Client.Cmd
                                         Console.WriteLine(p.Result);
                                 });
 
-
                                 continue;
                             }
 
