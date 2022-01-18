@@ -1,7 +1,7 @@
 ﻿
 namespace Crtz.Client.WinForms
 {
-    partial class MainView
+    partial class ViewWithAppService
     {
         /// <summary>
         /// Required designer variable.
@@ -36,10 +36,10 @@ namespace Crtz.Client.WinForms
             this.BtnSendOneTicker = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Field_Return = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Field_Return = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -125,24 +125,15 @@ namespace Crtz.Client.WinForms
             this.panel1.Size = new System.Drawing.Size(1177, 36);
             this.panel1.TabIndex = 0;
             // 
-            // Field_Return
+            // button3
             // 
-            this.Field_Return.AutoSize = true;
-            this.Field_Return.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Field_Return.Location = new System.Drawing.Point(3, 42);
-            this.Field_Return.Name = "Field_Return";
-            this.Field_Return.Size = new System.Drawing.Size(1177, 301);
-            this.Field_Return.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(629, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hello World Sync";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Location = new System.Drawing.Point(853, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 30);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Do something";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -154,24 +145,33 @@ namespace Crtz.Client.WinForms
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(853, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 30);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Do something";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(629, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Hello World Sync";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // MainView
+            // Field_Return
+            // 
+            this.Field_Return.AutoSize = true;
+            this.Field_Return.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Field_Return.Location = new System.Drawing.Point(3, 42);
+            this.Field_Return.Name = "Field_Return";
+            this.Field_Return.Size = new System.Drawing.Size(1177, 301);
+            this.Field_Return.TabIndex = 1;
+            // 
+            // ViewWithAppClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 343);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "MainView";
-            this.Text = "Form1";
+            this.Name = "ViewWithAppClient";
+            this.Text = "With AppService";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);

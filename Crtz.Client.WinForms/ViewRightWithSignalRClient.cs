@@ -12,14 +12,14 @@ using Crtz.Common;
 
 namespace Crtz.Client.WinForms
 {
-    public partial class MainView : Form
+    public partial class ViewRightWithSignalRClient : Form
     {
         private string url = "http://localhost:6118";
         private HubConnection connection;
         private IHubProxy myHub;
         private IDisposable signalR;
 
-        public MainView()
+        public ViewRightWithSignalRClient()
         {
             InitializeComponent();
         }
@@ -75,11 +75,12 @@ namespace Crtz.Client.WinForms
         private void button2_Click(object sender, EventArgs e)
         {
             this.SafeInvoke(pp => Field_Return.Text = $"Starting Message event");
-
-            myHub.On<string>("AddMessage", p =>
             {
-                this.SafeInvoke(pp => Field_Return.Text = $"Message event: " + p);
-            });
+                myHub.On<string>("AddMessage", p =>
+                {
+                    this.SafeInvoke(pp => Field_Return.Text = $"Message event: " + p);
+                });
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

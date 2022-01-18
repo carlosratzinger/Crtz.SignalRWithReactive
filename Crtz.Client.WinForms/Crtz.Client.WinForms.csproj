@@ -52,16 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainView.cs">
+    <Compile Include="ViewWithAppClient.cs" />
+    <Compile Include="ViewWithAppClient.Designer.cs">
+      <DependentUpon>ViewWithAppClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRightWithSignalRClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainView.Designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <Compile Include="ViewRightWithSignalRClient.Designer.cs">
+      <DependentUpon>ViewRightWithSignalRClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainView.resx">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <EmbeddedResource Include="ViewWithAppClient.resx">
+      <DependentUpon>ViewWithAppClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRightWithSignalRClient.resx">
+      <DependentUpon>ViewRightWithSignalRClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
